@@ -21,16 +21,31 @@
 		<link rel="stylesheet" href="css/component.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery.js"></script>
+		<script src="js/layer/layer.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
 		<script src="js/jquery-migrate-1.1.1.js"></script>
 		<script src="js/jquery.equalheights.js"></script>
 		<script src="js/jquery.ui.totop.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
 		<script src="js/camera.js"></script>
 		<script src="js/snap.svg-min.js"></script>
-		<!--[if (gt IE 9)|!(IE)]><!-->
 		<script src="js/jquery.mobile.customized.min.js"></script>
-		<!--<![endif]-->
+<style>
+.photos-demo img{
+width:220px;
+height:160px;
+float: left;
+display: block;
+margin: 7px 10px;
+position: relative;
+cursor:pointer;
+}
+</style>
 		<script>
+	    //加载扩展模块
+		layer.config({
+			extend: 'extend/layer.ext.js'
+		});
+		
 		$(document).ready(function(){
 			jQuery('#camera_wrap').camera({
 			loader: false,
@@ -44,25 +59,23 @@
 			});
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		})
+		
+		 layer.ready(function(){
+			layer.open({
+				type: 1,
+				skin: 'layui-layer-lan',
+				title: '热烈庆祝10月份再创辉煌，中标率60%+',
+				fix: false,
+				shadeClose: true,
+				maxmin: false,
+				area: ['640px', '442px'],
+			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="400px" type="video/mp4" >'
+			});	 
+			layer.photos({
+				photos: '#photosDemoShow'
+			});
+});
 		</script>
-		<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-		<link rel="stylesheet" media="screen" href="css/ie.css">
-		<![endif]-->
-		<!--[if lt IE 10]>
-		<link rel="stylesheet" media="screen" href="css/ie1.css">
-
-		<![endif]-->
-		<script>
-		var _hmt = _hmt || [];
-		(function() {
-		  var hm = document.createElement("script");
-		  hm.src = "//hm.baidu.com/hm.js?8f7335b1472ee7c8998ab3c48633917d";
-		  var s = document.getElementsByTagName("script")[0]; 
-		  s.parentNode.insertBefore(hm, s);
-		})();
-		</script>
-
 	</head>
 	<body class="page1">
 <!--==============================header=================================-->
@@ -105,10 +118,19 @@
 			<figure>
 				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
 				<figcaption>
-					<div class="title">10月</div>
+					<div class="title">11月</div>
 				</figcaption>
 			</figure>
 			<span>你猜</span>
+		</a>
+		<a href="#10" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
+			<figure>
+				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
+				<figcaption>
+					<div class="title">10月</div>
+				</figcaption>
+			</figure>
+			<span>60%</span>
 		</a>
 		<a href="#9" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
 			<figure>
@@ -128,16 +150,19 @@
 			</figure>
 			<span>65%</span>
 		</a>
-		<a href="#7" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
-			<figure>
-				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
-				<figcaption>
-					<div class="title">7月</div>
-				</figcaption>
-			</figure>
-			<span>35%</span>
-		</a>
 	</section>
+</div>
+
+<div id="photosDemoShow"  class="container_12 photos-demo">
+        <!-- layer-src表示大图  layer-pid表示图片id  src表示缩略图-->
+        <img layer-src="bids/10/2015-10-24 190553(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选">
+        <img layer-src="bids/10/2015-10-24 190557(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选">
+        <img layer-src="bids/9/2015-10-26 152858.jpg" layer-pid="" src="bids/9/2015-10-26 152858.jpg"  alt="9月中标精选">
+        <img layer-src="bids/9/2015-10-26 152902.jpg" layer-pid="" src="bids/9/2015-10-26 152902.jpg" alt="9月中标精选">
+        <img layer-src="bids/10/2015-10-24 190612(1).jpg" layer-pid="" src="bids/10/2015-10-24 190612(1).jpg" alt="10月中标精选">
+		<img layer-src="bids/10/2015-10-24 190619(1).jpg" layer-pid="" src="bids/10/2015-10-24 190619(1).jpg"  alt="10月中标精选">
+        <img layer-src="bids/10/2015-10-24 190622(1).jpg" layer-pid="" src="bids/10/2015-10-24 190622(1).jpg" alt="10月中标精选">
+		<img layer-src="bids/10/2015-10-24 190608(1).jpg" layer-pid="" src="bids/10/2015-10-24 190608(1).jpg" alt="10月中标精选">
 </div>
 <footer>
 	<div class="container_12">
@@ -160,6 +185,10 @@
 	</div>
 </footer>
 		<script>
+		
+		
+		
+		
 			$(document).ready(function(){
 			 $(".bt-menu-trigger").toggle(
 				function(){
@@ -191,5 +220,6 @@
 			init();
 			})();
 		</script>
+ 
 </body>
 </html>
