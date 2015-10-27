@@ -68,12 +68,6 @@ cursor:pointer;
 				}    
 			}    
 		}    
-    
- 
-		
-		
-		
-		
 			jQuery('#camera_wrap').camera({
 			loader: false,
 			pagination: true ,
@@ -85,6 +79,59 @@ cursor:pointer;
 			fx: 'mosaic'
 			});
 			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+			$(".main_visual").hover(function(){
+			$("#btn_prev,#btn_next").fadeIn()
+			},function(){
+				$("#btn_prev,#btn_next").fadeOut()
+			});
+			
+			$dragBln = false;
+			
+			$(".main_image").touchSlider({
+				flexible : true,
+				speed : 200,
+				btn_prev : $("#btn_prev"),
+				btn_next : $("#btn_next"),
+				paging : $(".flicking_con a"),
+				counter : function (e){
+					$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+				}
+			});
+			
+			$(".main_image").bind("mousedown", function() {
+				$dragBln = false;
+			});
+			
+			$(".main_image").bind("dragstart", function() {
+				$dragBln = true;
+			});
+			
+			$(".main_image a").click(function(){
+				if($dragBln) {
+					return false;
+				}
+			});
+			
+			timer = setInterval(function(){
+				$("#btn_next").click();
+			}, 5000);
+			
+			$(".main_visual").hover(function(){
+				clearInterval(timer);
+			},function(){
+				timer = setInterval(function(){
+					$("#btn_next").click();
+				},5000);
+			});
+			
+			$(".main_image").bind("touchstart",function(){
+				clearInterval(timer);
+			}).bind("touchend", function(){
+				timer = setInterval(function(){
+					$("#btn_next").click();
+				}, 5000);
+			});
 		})
 		
 		 layer.ready(function(){
@@ -122,13 +169,22 @@ cursor:pointer;
 			</div>
 		</header>
 
-		<div class="slider_wrapper">
-			<div id="camera_wrap" class="">
-				<div data-src="images/slide.jpg"></div>
-				<div data-src="images/slide1.jpg"></div>
-				<div data-src="images/slide2.jpg"></div>
-			</div>
-		</div>
+<div class="main_visual">
+	<div class="flicking_con">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+	</div>
+	<div class="main_image">
+		<ul>
+			<li><span class="img_1"></span></li>
+			<li><span class="img_2"></span></li>
+			<li><span class="img_3"></span></li>
+		</ul>
+		<a href="javascript:;" id="btn_prev"></a>
+		<a href="javascript:;" id="btn_next"></a>
+	</div>
+</div>
 		<div class="container_12">
 			<div class="grid_12">
 				<div class="slogan_james">
