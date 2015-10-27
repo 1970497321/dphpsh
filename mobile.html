@@ -29,7 +29,7 @@
 		<script src="js/camera.js"></script>
 		<script src="js/snap.svg-min.js"></script>
 		<script src="js/jquery.mobile.customized.min.js"></script>
-	    <script src="js/jquery.event.drag-1.5.min.js"></script>
+		<script src="js/jquery.event.drag-1.5.min.js"></script>
 		<script src="js/jquery.touchSlider.js"></script>
 <style>
 .photos-demo img{
@@ -49,29 +49,20 @@ cursor:pointer;
 		});
 		
 		$(document).ready(function(){
-		
-		/** 
-		 * 验证是否为智能手机 
-		 */  
-		 var agent = navigator.userAgent.toLowerCase();    
-		 var keywords = [ "android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser" ];    
-		  
-		//排除 Windows 桌面系统    
-		if (!(agent.indexOf("windows nt") > -1) || (agent.indexOf("windows nt") > -1 && agent.indexOf("compatible; msie 9.0;") > -1)) {    
-			//排除苹果桌面系统    
-			if (!(agent.indexOf("windows nt") > -1) && !agent.indexOf("macintosh") > -1 ) {    
-				for (var item in keywords) {    
-					if (agent.indexOf(item) > -1 ) {    
-						document.location.href="mobile.html";
-						break;    
-					}    
-				}    
-			}    
-		}    
-			 
+
+			jQuery('#camera_wrap').camera({
+			loader: false,
+			pagination: true ,
+			minHeight: '394',
+			thumbnails: false,
+			height:'32.1875%',
+			caption: false,
+			navigation: false,
+			fx: 'mosaic'
+			});
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			
-			$(".main_visual").hover(function(){
+			/*$(".main_visual").hover(function(){
 			$("#btn_prev,#btn_next").fadeIn()
 			},function(){
 				$("#btn_prev,#btn_next").fadeOut()
@@ -122,7 +113,8 @@ cursor:pointer;
 				timer = setInterval(function(){
 					$("#btn_next").click();
 				}, 5000);
-			});
+			});*/
+			
 		})
 		
 		 layer.ready(function(){
@@ -160,6 +152,7 @@ cursor:pointer;
 			</div>
 		</header>
 
+ 
 <div class="main_visual">
 	<div class="flicking_con">
 		<a href="#">1</a>
@@ -176,14 +169,6 @@ cursor:pointer;
 		<a href="javascript:;" id="btn_next"></a>
 	</div>
 </div>
-
-		<div class="slider_wrapper" style="display:none">
-			<div id="camera_wrap" class="">
-				<div data-src="images/slide.jpg"></div>
-				<div data-src="images/slide1.jpg"></div>
-				<div data-src="images/slide2.jpg"></div>
-			</div>
-		</div>
 		
 		<div class="container_12">
 			<div class="grid_12">
