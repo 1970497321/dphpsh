@@ -68,7 +68,16 @@ cursor:pointer;
 				}    
 			}    
 		}    
-			 
+			jQuery('#camera_wrap').camera({
+			loader: false,
+			pagination: true ,
+			minHeight: '394',
+			thumbnails: false,
+			height:'32.1875%',
+			caption: false,
+			navigation: false,
+			fx: 'mosaic'
+			});
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			
 			$(".main_visual").hover(function(){
