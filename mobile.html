@@ -68,16 +68,7 @@ cursor:pointer;
 				}    
 			}    
 		}    
-			jQuery('#camera_wrap').camera({
-			loader: false,
-			pagination: true ,
-			minHeight: '394',
-			thumbnails: false,
-			height:'32.1875%',
-			caption: false,
-			navigation: false,
-			fx: 'mosaic'
-			});
+			 
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			
 			$(".main_visual").hover(function(){
@@ -185,6 +176,15 @@ cursor:pointer;
 		<a href="javascript:;" id="btn_next"></a>
 	</div>
 </div>
+
+		<div class="slider_wrapper" style="display:none">
+			<div id="camera_wrap" class="">
+				<div data-src="images/slide.jpg"></div>
+				<div data-src="images/slide1.jpg"></div>
+				<div data-src="images/slide2.jpg"></div>
+			</div>
+		</div>
+		
 		<div class="container_12">
 			<div class="grid_12">
 				<div class="slogan_james">
