@@ -65,7 +65,11 @@ cursor:pointer;
 				flexible : true,
 				speed : 200,
 				btn_prev : $("#btn_prev"),
-				btn_next : $("#btn_next")
+				btn_next : $("#btn_next"),
+				paging : $(".flicking_con a"),
+				counter : function (e){
+					$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+				}
 			});
 			
 			$(".main_image").bind("mousedown", function() {
@@ -141,6 +145,11 @@ cursor:pointer;
 
  
 <div class="main_visual">
+	<div class="flicking_con">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+	</div>
 	<div class="main_image">
 		<ul>
 			<li><span class="img_1"></span></li>
