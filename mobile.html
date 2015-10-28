@@ -31,6 +31,9 @@
 		<script src="js/jquery.mobile.customized.min.js"></script>
 		<script src="js/jquery.event.drag-1.5.min.js"></script>
 		<script src="js/jquery.touchSlider.js"></script>
+		<link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" />
+		<script src="js/jquery.mobile-1.1.1.min.js"></script>
+		<script src="js/imageflip.mini.js"></script>
 <style>
 .photos-demo img{
 width:220px;
@@ -41,6 +44,17 @@ margin: 7px 10px;
 position: relative;
 cursor:pointer;
 }
+#iGallery		{list-style:none; padding:0px; margin:0px}
+#iGallery li	{list-style:none; padding:2px; margin:2px; border:1px solid #999; float:left}
+
+/* imageflip CSS. Copy & Paste this to your CSS file */
+#imageflippage	{background-color:#000; margin:0px; padding:0px; border:none; height:100%; width:100%}
+#tadcontent		{padding:0px; margin:0px; position:relative; background:#000; height:100%; width:100%;}
+#imageflipimg	{vertical-align:middle; height:100%; width:100%; z-index:98; background-position:center; background-size:contain; text-align:center; background-repeat:no-repeat }
+#imagefliper	{width:100%; top:45px; bottom:0px; position:absolute; z-index:99}
+#tadnavi		{position:fixed; top:0px; z-index:100; width:100%; opacity:0.7; display:none }
+#tadinfo		{position:fixed; display:none; bottom:0px; width:100%; padding:5px; background-color:#333333; opacity:0.7; color:#FFFFFF; text-align:center; font-size:small; font-family:Verdana, Geneva, sans-serif}
+
 </style>
 		<script>
 	    //加载扩展模块
@@ -118,11 +132,14 @@ cursor:pointer;
 				maxmin: false,
 				area: ['640px', '442px'],
 			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="400px" type="video/mp4" >'
-			});	 */
+			});	
 			layer.photos({
 				photos: '#photosDemoShow'
-			});
-});
+			}); */
+		});
+		$( document ).delegate("#home", "pageinit", function() {
+			$('#iGallery').imageflip()
+		})
 		</script>
 	</head>
 	<body class="page1">
@@ -212,17 +229,27 @@ cursor:pointer;
 	</section>
 </div>
 
-<div id="photosDemoShow"  class="container_12 photos-demo">
-        <!-- layer-src表示大图  layer-pid表示图片id  src表示缩略图-->
-        <img layer-src="bids/10/2015-10-24 190553(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选">
-        <img layer-src="bids/10/2015-10-24 190557(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选">
-        <img layer-src="bids/9/2015-10-26 152858.jpg" layer-pid="" src="bids/9/2015-10-26 152858.jpg"  alt="9月中标精选">
-        <img layer-src="bids/9/2015-10-26 152902.jpg" layer-pid="" src="bids/9/2015-10-26 152902.jpg" alt="9月中标精选">
-        <img layer-src="bids/10/2015-10-24 190612(1).jpg" layer-pid="" src="bids/10/2015-10-24 190612(1).jpg" alt="10月中标精选">
-		<img layer-src="bids/10/2015-10-24 190619(1).jpg" layer-pid="" src="bids/10/2015-10-24 190619(1).jpg"  alt="10月中标精选">
-        <img layer-src="bids/10/2015-10-24 190622(1).jpg" layer-pid="" src="bids/10/2015-10-24 190622(1).jpg" alt="10月中标精选">
-		<img layer-src="bids/10/2015-10-24 190608(1).jpg" layer-pid="" src="bids/10/2015-10-24 190608(1).jpg" alt="10月中标精选">
+
+<div data-role="page" id="home" data-theme="c" data-title="imageFlip Demo">
+	<div data-role="content" id="content">
+		<div class="content-primary">	
+		<ul id="iGallery">
+			<li><a href="bids/10/2015-10-24 190553(1).jpg"><img src="bids/10/2015-10-24 190553(1).jpg"  alt="10月中标精选"/></a></li>
+			<li><a href="bids/10/2015-10-24 190557(1).jpg"><img src="bids/10/2015-10-24 190557(1).jpg"  alt="10月中标精选"/></a></li>
+			<li><a href="bids/9/2015-10-26 152858.jpg"><img src="bids/9/2015-10-26 152858.jpg" alt="9月中标精选"/></a></li>
+			<li><a href="bids/9/2015-10-26 152902.jpg"><img src="bids/9/2015-10-26 152902.jpg" alt="9月中标精选"/></a></li>
+			<li><a href="bids/10/2015-10-24 190612(1).jpg"><img src="bids/10/2015-10-24 190612(1).jpg"  alt="10月中标精选"/></a></li>
+			<li><a href="bids/10/2015-10-24 190619(1).jpg"><img src="bids/10/2015-10-24 190619(1).jpg"  alt="10月中标精选"/></a></li>
+			<li><a href="bids/10/2015-10-24 190622(1).jpg"><img src="bids/10/2015-10-24 190622(1).jpg"  alt="10月中标精选"/></a></li>
+			<li><a href="bids/10/2015-10-24 190608(1).jpg"><img src="bids/10/2015-10-24 190608(1).jpg"  alt="10月中标精选"/></a></li>
+		</ul>
+		</div>
+	</div>
 </div>
+
+ 
+
+
 <footer>
 	<div class="container_12">
 		<div class="grid_12">
