@@ -40,8 +40,9 @@ width:220px;
 height:160px;
 float: left;
 display: block;
-margin: 7px 10px
-position: relative
+margin: 7px 10px;
+position: relative;
+cursor:pointer;
 }
 #iGallery		{list-style:none; padding:0px; margin:0px}
 #iGallery li	{list-style:none; padding:2px; margin:2px; border:1px solid #999; float:left}
@@ -57,9 +58,9 @@ position: relative
 </style>
 		<script>
 	    //加载扩展模块
-		/*layer.config({
+		layer.config({
 			extend: 'extend/layer.ext.js'
-		});*/
+		});
 		
 		$(document).ready(function(){
 
@@ -121,8 +122,8 @@ position: relative
 			
 		})
 		
-		 /*layer.ready(function(){
-			layer.open({
+		 layer.ready(function(){
+			/*layer.open({
 				type: 1,
 				skin: 'layui-layer-lan',
 				title: '热烈庆祝10月份再创辉煌，中标率60%+',
@@ -134,8 +135,8 @@ position: relative
 			});	
 			layer.photos({
 				photos: '#photosDemoShow'
-			}); 
-		});*/
+			}); */
+		});
 		$( document ).delegate("#home", "pageinit", function() {
 			$('#iGallery').imageflip()
 		})
@@ -229,9 +230,9 @@ position: relative
 </div>
 
 
-<div data-role="page" id="home" data-theme="c" data-title="imageFlip Demo" class="ontainer_12">
+<div data-role="page" id="home" data-theme="c" data-title="imageFlip Demo">
 	<div data-role="content" id="content">
-		<div class="content-primary  photos-demo">	
+		<div class="content-primary">	
 		<ul id="iGallery">
 			<li><a href="bids/10/2015-10-24 190553(1).jpg"><img src="bids/10/2015-10-24 190553(1).jpg"  alt="10月中标精选"/></a></li>
 			<li><a href="bids/10/2015-10-24 190557(1).jpg"><img src="bids/10/2015-10-24 190557(1).jpg"  alt="10月中标精选"/></a></li>
