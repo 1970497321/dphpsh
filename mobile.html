@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="css/camera.css">
 		<link rel="stylesheet" href="css/component.css">
 		<link rel="stylesheet" href="css/style.css">
-		 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="js/jquery.js"></script>
 		<script src="js/layer/layer.js"></script>
 		<script src="js/jquery.easing.1.3.js"></script>
 		<script src="js/jquery-migrate-1.1.1.js"></script>
@@ -31,8 +31,6 @@
 		<script src="js/jquery.mobile.customized.min.js"></script>
 		<script src="js/jquery.event.drag-1.5.min.js"></script>
 		<script src="js/jquery.touchSlider.js"></script>
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	
 <style>
 .photos-demo img{
 width:220px;
@@ -108,52 +106,10 @@ cursor:pointer;
 				}, 5000);
 			});
 			
-$(document).on("pageinit", function () {
-  $("#popupVideo").on({
-    popupbeforeposition: function () {
-      var size = scale(497, 298, 15, 1),
-        w = size.width,
-        h = size.height,
-        markup = " <iframe src='http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4' width='" + w + "' height='" + h + "'  seamless></iframe>";
-      $("#popupVideo").html(markup);
-    },
-    popupafterclose: function () {
-      $("#popupVideo").html("<span></span>");
-    }
-  });
-});
-
-			
-			
 		})
-
-function scale(width, height, padding, border) {
-  var scrWidth = $(window).width() - 30,
-    scrHeight = $(window).height() - 30,
-    ifrPadding = 2 * padding,
-    ifrBorder = 2 * border,
-    ifrWidth = width + ifrPadding + ifrBorder,
-    ifrHeight = height + ifrPadding + ifrBorder,
-    h, w;
-
-  if (ifrWidth < scrWidth && ifrHeight < scrHeight) {
-    w = ifrWidth;
-    h = ifrHeight;
-  } else if ((ifrWidth / scrWidth) > (ifrHeight / scrHeight)) {
-    w = scrWidth;
-    h = (scrWidth / ifrWidth) * ifrHeight;
-  } else {
-    h = scrHeight;
-    w = (scrHeight / ifrHeight) * ifrWidth;
-  }
-
-  return {
-    'width': w - (ifrPadding + ifrBorder),
-      'height': h - (ifrPadding + ifrBorder)
-  };
-};
+		
 		 layer.ready(function(){
-			/*layer.open({
+			layer.open({
 				type: 1,
 				skin: 'layui-layer-lan',
 				title: '热烈庆祝10月份再创辉煌，中标率60%+',
@@ -162,14 +118,12 @@ function scale(width, height, padding, border) {
 				maxmin: false,
 				area: ['640px', '442px'],
 			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="400px" type="video/mp4" >'
-			});	 */
+			});	 
 			layer.photos({
 				photos: '#photosDemoShow'
 			});
 });
 		</script>
-		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-  
 	</head>
 	<body class="page1">
 <!--==============================header=================================-->
@@ -260,22 +214,15 @@ function scale(width, height, padding, border) {
 
 <div id="photosDemoShow"  class="container_12 photos-demo">
         <!-- layer-src表示大图  layer-pid表示图片id  src表示缩略图-->
-        <img layer-src="bids/10/2015-10-24 190553(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选">
-        <img layer-src="bids/10/2015-10-24 190557(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选">
-        <img layer-src="bids/9/2015-10-26 152858.jpg" layer-pid="" src="bids/9/2015-10-26 152858.jpg"  alt="9月中标精选">
-        <img layer-src="bids/9/2015-10-26 152902.jpg" layer-pid="" src="bids/9/2015-10-26 152902.jpg" alt="9月中标精选">
-        <img layer-src="bids/10/2015-10-24 190612(1).jpg" layer-pid="" src="bids/10/2015-10-24 190612(1).jpg" alt="10月中标精选">
-		<img layer-src="bids/10/2015-10-24 190619(1).jpg" layer-pid="" src="bids/10/2015-10-24 190619(1).jpg"  alt="10月中标精选">
-        <img layer-src="bids/10/2015-10-24 190622(1).jpg" layer-pid="" src="bids/10/2015-10-24 190622(1).jpg" alt="10月中标精选">
-		<img layer-src="bids/10/2015-10-24 190608(1).jpg" layer-pid="" src="bids/10/2015-10-24 190608(1).jpg" alt="10月中标精选">
+        <img layer-src="bids/10/2015-10-24 190553(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" target="_blank" alt="10月中标精选">
+        <img layer-src="bids/10/2015-10-24 190557(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" target="_blank" alt="10月中标精选">
+        <img layer-src="bids/9/2015-10-26 152858.jpg" layer-pid="" src="bids/9/2015-10-26 152858.jpg"   target="_blank" alt="9月中标精选">
+        <img layer-src="bids/9/2015-10-26 152902.jpg" layer-pid="" src="bids/9/2015-10-26 152902.jpg"  target="_blank" alt="9月中标精选">
+        <img layer-src="bids/10/2015-10-24 190612(1).jpg" layer-pid="" src="bids/10/2015-10-24 190612(1).jpg" target="_blank"  alt="10月中标精选">
+		<img layer-src="bids/10/2015-10-24 190619(1).jpg" layer-pid="" src="bids/10/2015-10-24 190619(1).jpg" target="_blank"   alt="10月中标精选">
+        <img layer-src="bids/10/2015-10-24 190622(1).jpg" layer-pid="" src="bids/10/2015-10-24 190622(1).jpg" target="_blank"  alt="10月中标精选">
+		<img layer-src="bids/10/2015-10-24 190608(1).jpg" layer-pid="" src="bids/10/2015-10-24 190608(1).jpg" target="_blank"  alt="10月中标精选">
 </div>
-    <div data-role="page" data-theme="e"> 
-        <div data-role="content"> 
-            <a href="#popupVideo" data-rel="popup" data-position-to="window" data-role="button" data-theme="b" data-inline="true">Launch video player</a>    
-            <div data-role="popup" id="popupVideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
-            </div>
-        </div>
-    </div>
 <footer>
 	<div class="container_12">
 		<div class="grid_12">
