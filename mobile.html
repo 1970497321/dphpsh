@@ -31,6 +31,7 @@
 		<script src="js/jquery.mobile.customized.min.js"></script>
 		<script src="js/jquery.event.drag-1.5.min.js"></script>
 		<script src="js/jquery.touchSlider.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 <style>
 .photos-demo img{
 width:220px;
@@ -106,8 +107,50 @@ cursor:pointer;
 				}, 5000);
 			});
 			
+$(document).on("pageinit", function () {
+  $("#popupVideo").on({
+    popupbeforeposition: function () {
+      var size = scale(497, 298, 15, 1),
+        w = size.width,
+        h = size.height,
+        markup = " <iframe src='http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4' width='" + w + "' height='" + h + "'  seamless></iframe>";
+      $("#popupVideo").html(markup);
+    },
+    popupafterclose: function () {
+      $("#popupVideo").html("<span></span>");
+    }
+  });
+});
+
+			
+			
 		})
-		
+
+function scale(width, height, padding, border) {
+  var scrWidth = $(window).width() - 30,
+    scrHeight = $(window).height() - 30,
+    ifrPadding = 2 * padding,
+    ifrBorder = 2 * border,
+    ifrWidth = width + ifrPadding + ifrBorder,
+    ifrHeight = height + ifrPadding + ifrBorder,
+    h, w;
+
+  if (ifrWidth < scrWidth && ifrHeight < scrHeight) {
+    w = ifrWidth;
+    h = ifrHeight;
+  } else if ((ifrWidth / scrWidth) > (ifrHeight / scrHeight)) {
+    w = scrWidth;
+    h = (scrWidth / ifrWidth) * ifrHeight;
+  } else {
+    h = scrHeight;
+    w = (scrHeight / ifrHeight) * ifrWidth;
+  }
+
+  return {
+    'width': w - (ifrPadding + ifrBorder),
+      'height': h - (ifrPadding + ifrBorder)
+  };
+};
 		 layer.ready(function(){
 			/*layer.open({
 				type: 1,
