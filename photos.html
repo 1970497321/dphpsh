@@ -1,16 +1,39 @@
 <!DOCTYPE html> 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width">
-<title>imageflip Example</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-<link rel="stylesheet" href="css/camera.css">
+<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="author" content="代理沪牌">
+		<meta name="location" content="province=上海;city=上海;coord=">
+		<meta name="baidu-site-verification" content="shrPv4kVfJ" />
+		<meta name="keywords" content="沪牌,代拍上海牌,代拍沪牌,黄牛,临牌,国拍,上海,车牌,车牌黄牛,专业代拍,专业机房,上海拍牌,上海车牌,中标率">
+		<meta name="description" content="专业沪牌代拍,专业代拍沪牌公司拥有专业机房,超高中标率,上海牌代拍,沪牌,代拍,上海国拍,代拍找黄牛,上海拍牌">
+		
+		<title>代理沪牌,临牌、沪牌等一条龙服务</title>
+
+		<link rel="icon" href="images/proxy.ico">
+		<link rel="shortcut icon" href="images/proxy.ico" type="image/x-icon">
+		<link rel="bookmark" href="images/proxy.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/camera.css">
 		<link rel="stylesheet" href="css/component.css">
 		<link rel="stylesheet" href="css/style.css">
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-<script src="js/imageflip.mini.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/layer/layer.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery-migrate-1.1.1.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/camera.js"></script>
+		<script src="js/snap.svg-min.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script src="js/jquery.event.drag-1.5.min.js"></script>
+		<script src="js/jquery.touchSlider.js"></script>
+		<link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" />
+		<script src="js/jquery.mobile-1.1.1.min.js"></script>
+		<script src="js/imageflip.mini.js"></script>
 <style type="text/css">
 .photos-demo img{
 width:220px;
@@ -39,7 +62,50 @@ $( document ).delegate("#home", "pageinit", function() {
 </script>
 </head>
 <body>
+<header>
+			<div class="container_james">
+				<h1>
+					<div class="grid_1">
+						<img src="images/chepai.png" width="240px"  height="120px" alt="专业代理">
+					</div>
+					<div class="grid_2">
+						<img src="images/logo.png" alt="专业代理">
+					</div>
+					<div class="grid_3">
+						<img src="images/weixin.png" width="240px"  height="120px" alt="专业代理">
+					</div>
+				</h1>
+			</div>
+		</header>
 
+ 
+<div class="main_visual">
+	<div class="flicking_con">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+	</div>
+	<div class="main_image">
+		<ul>
+			<li><span class="img_1"></span></li>
+			<li><span class="img_2"></span></li>
+			<li><span class="img_3"></span></li>
+		</ul>
+		<a href="javascript:;" id="btn_prev"></a>
+		<a href="javascript:;" id="btn_next"></a>
+	</div>
+</div>
+		
+		<div class="container_12">
+			<div class="grid_12">
+				<div class="slogan_james">
+					为您提供临牌、沪牌等一条龙服务<br>
+				</div>
+				<div class="slogan">
+					专业团队、专业机房、核心技术=Believe In Professional<br>
+				</div>
+			</div>
+		</div>
 <div data-role="page" id="home" data-theme="c" data-title="imageFlip Demo" class="container_12">
 	<div data-role="content" id="content">
 		<div class="content-primary">	
