@@ -86,9 +86,23 @@ cursor:pointer;
 		})
 		
 		 layer.ready(function(){
-			var browser=navigator.appName;
-		    alert("browser"+browser);
-			layer.open({
+			var browser=navigator.userAgent;
+			alert(browser);
+			if ((browser.indexOf('MSIE') >= 0) && (browser.indexOf('Opera') < 0)){
+			alert('你是使用IE');
+			}else if (navigator.userAgent.indexOf('Firefox') >= 0){
+			alert('你是使用Firefox');
+			}
+			else if (navigator.userAgent.indexOf('Opera') >= 0){
+			alert('你是使用Opera');
+			}else
+			{
+			alert('你是使用其他的浏览器浏览网页！');
+			}
+			
+			if ((browser=="Netscape"||browser=="Microsoft Internet Explorer")
+			{
+				layer.open({
 				type: 1,
 				skin: 'layui-layer-lan',
 				title: '热烈庆祝10月份再创辉煌，中标率60%+',
@@ -97,7 +111,20 @@ cursor:pointer;
 				maxmin: false,
 				area: ['640px', '442px'],
 			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="400px" type="video/mp4" >'
-			});	
+			});
+			}else
+			{
+				layer.open({
+				type: 1,
+				skin: 'layui-layer-lan',
+				title: '热烈庆祝10月份再创辉煌，中标率60%+',
+				fix: false,
+				shadeClose: true,
+				maxmin: false,
+				area: ['640px', '442px'],
+			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="400px" type="video/mp4" >'
+			});
+			}
 
 			
 			layer.photos({
