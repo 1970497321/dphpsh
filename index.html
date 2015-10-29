@@ -47,31 +47,24 @@ cursor:pointer;
 		});
 		
 		$(document).ready(function(){
-		
-		/** 
-		 * 验证是否为智能手机 
-		 */  
-		 var agent = navigator.userAgent.toLowerCase();    
-		 var keywords = [ "android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser" ];    
-		  
-		//排除 Windows 桌面系统    
-		if (!(agent.indexOf("windows nt") > -1) || (agent.indexOf("windows nt") > -1 && agent.indexOf("compatible; msie 9.0;") > -1)) {    
-			//排除苹果桌面系统    
-			if (!(agent.indexOf("windows nt") > -1) && !agent.indexOf("macintosh") > -1 ) {    
-				for (var item in keywords) {    
-					if (agent.indexOf(item) > -1 ) {    
-						document.location.href="mobile.html";
-						break;    
+			/** 
+			 * 验证是否为智能手机 
+			 */  
+			 var agent = navigator.userAgent.toLowerCase();    
+			 var keywords = [ "android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser" ];    
+			  
+			//排除 Windows 桌面系统    
+			if (!(agent.indexOf("windows nt") > -1) || (agent.indexOf("windows nt") > -1 && agent.indexOf("compatible; msie 9.0;") > -1)) {    
+				//排除苹果桌面系统    
+				if (!(agent.indexOf("windows nt") > -1) && !agent.indexOf("macintosh") > -1 ) {    
+					for (var item in keywords) {    
+						if (agent.indexOf(item) > -1 ) {    
+							document.location.href="mobile.html";
+							break;    
+						}    
 					}    
 				}    
 			}    
-		}    
-    
- 
-		
-		
-		
-		
 			jQuery('#camera_wrap').camera({
 			loader: false,
 			pagination: true ,
@@ -83,7 +76,7 @@ cursor:pointer;
 			fx: 'mosaic'
 			});
 			$().UItoTop({ easingType: 'easeOutQuart' });
-		})
+		});
 		
 		 layer.ready(function(){
 			var browser=navigator.userAgent;
@@ -97,6 +90,7 @@ cursor:pointer;
 				maxmin: false,
 				area: ['640px', '442px'],
 			 	content: '<object width="640px" height="400px" data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" align="center"></object>'
+				});
 			}else{
 				layer.open({
 				type: 1,
@@ -107,12 +101,12 @@ cursor:pointer;
 				maxmin: false,
 				area: ['640px', '442px'],
 			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="400px" type="video/mp4" >'
+				});
 			}
-				
 			layer.photos({
 				photos: '#photosDemoShow'
 			});
-});
+		});
 		</script>
 	</head>
 	<body class="page1">
