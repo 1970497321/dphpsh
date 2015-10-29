@@ -78,7 +78,14 @@ cursor:pointer;
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 		 layer.ready(function(){
-			 var contentFirefox = '<object width="640" height="400" id="dphpsh_v" align="center"  data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" >'
+			 var contentFirefox = '<object width="640" height="400" id="dphpsh_ff" align="center"  data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" >'
+		+' <param name="allowScriptAccess" value="sameDomain" />'
+		+' <param name="movie" value="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" />'
+		+' <param name="quality" value="high" />'
+		+' <param name="bgcolor" value="#ffffff" />'
+		+' <param name="autoplay" value="true"/>'
+		+' </object>';
+		var contentIE = '<object width="640" height="400" id="dphpsh_ie" align="center" classid="clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598"  data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" >'
 		+' <param name="allowScriptAccess" value="sameDomain" />'
 		+' <param name="movie" value="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" />'
 		+' <param name="quality" value="high" />'
@@ -86,9 +93,9 @@ cursor:pointer;
 		+' <param name="autoplay" value="true"/>'
 		+' </object>';
 			var contentOthers = '<embed width="640" height="400" src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" type="video/mp4" />';
-
+ 
 			var browser=navigator.userAgent;
-			if ((browser.indexOf('MSIE') >= 0) || (browser.indexOf('Firefox') >= 0)){
+			if ( (browser.indexOf('Firefox') >= 0)){
 				layer.open({
 				type: 1,
 				skin: 'layui-layer-lan',
@@ -98,6 +105,18 @@ cursor:pointer;
 				maxmin: false,
 				area: ['640px', '442px'],
 			 	content: contentFirefox
+				});
+			} else if( (browser.indexOf('MSIE') >= 0) ) {
+			{
+				layer.open({
+				type: 1,
+				skin: 'layui-layer-lan',
+				title: '热烈庆祝10月份再创辉煌，中标率60%+',
+				fix: false,
+				shadeClose: true,
+				maxmin: false,
+				area: ['640px', '442px'],
+			 	content: contentIE
 				});
 			}else{
 				layer.open({
