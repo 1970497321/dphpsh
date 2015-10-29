@@ -79,28 +79,18 @@ cursor:pointer;
 		});
 		
 		 layer.ready(function(){
-		 var content = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"'
-    +' codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/ swflash.cab#version=7,0,0,0"'
-	+' width="640" height="420" id="dphpsh_v" align="center">'
-	+' <param name="allowScriptAccess" value="sameDomain" />'
-	+' <param name="movie" value="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" />'
-	+' <param name="quality" value="high" />'
-	+' <param name="bgcolor" value="#ffffff" />'
-	+' <embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4"'
-	+' quality="high" bgcolor="#ffffff" width="640" height="420" name="mymovie" align="center" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'
-    +' </object>';
-	alert(content);
-				layer.open({
-				type: 1,
-				skin: 'layui-layer-lan',
-				title: '热烈庆祝10月份再创辉煌，中标率60%+',
-				fix: false,
-				shadeClose: true,
-				maxmin: false,
-				area: ['640px', '442px'],
-			 	content: content
-				});
-			/*var browser=navigator.userAgent;
+			 var contentFirefox = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"'
+		+' codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/ swflash.cab#version=7,0,0,0"'
+		+' width="640" height="420" id="dphpsh_v" align="center"> 您的浏览器不支持Flash，请点击<a href="http://www.macromedia.com/go/getflashplayer">下载</a> '
+		+' <param name="allowScriptAccess" value="sameDomain" />'
+		+' <param name="movie" value="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" />'
+		+' <param name="quality" value="high" />'
+		+' <param name="bgcolor" value="#ffffff" />'
+		+' param name="autoplay" value="true"/>'
+		+' </object>';
+			var contentOthers = '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640" height="400" type="video/mp4" />';
+
+			var browser=navigator.userAgent;
 			if ((browser.indexOf('MSIE') >= 0) || (browser.indexOf('Firefox') >= 0)){
 				layer.open({
 				type: 1,
@@ -110,7 +100,7 @@ cursor:pointer;
 				shadeClose: true,
 				maxmin: false,
 				area: ['640px', '442px'],
-			 	content: '<object width="640px" height="420px" data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" align="center"></object>'
+			 	content: contentFirefox
 				});
 			}else{
 				layer.open({
@@ -121,9 +111,9 @@ cursor:pointer;
 				shadeClose: true,
 				maxmin: false,
 				area: ['640px', '442px'],
-			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="420px" type="video/mp4" >'
+			 	content: contentOthers
 				});
-			}*/
+			}
 			layer.photos({
 				photos: '#photosDemoShow'
 			});
