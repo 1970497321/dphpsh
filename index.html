@@ -29,6 +29,11 @@
 		<script src="js/camera.js"></script>
 		<script src="js/snap.svg-min.js"></script>
 		<script src="js/jquery.mobile.customized.min.js"></script>
+		
+		<script src="http://videojs.github.io/videojs-contrib-hls/node_modules/video.js/dist/video-js/video.dev.js"></script>
+		<script src="http://videojs.github.io/videojs-contrib-hls/node_modules/videojs-contrib-media-sources/src/videojs-media-sources.js"></script>
+		<script src="https://github.com/videojs/videojs-contrib-hls/releases/download/v0.17.9/videojs.hls.min.js"></script>
+		<link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
 <style>
 .photos-demo img{
 width:220px;
@@ -78,20 +83,17 @@ cursor:pointer;
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 		 layer.ready(function(){
-			 var contentFirefox = '<object width="640" height="400" id="dphpsh_ff" align="center"  data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" >'
-		+' <param name="allowScriptAccess" value="sameDomain" />'
-		+' <param name="movie" value="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" />'
-		+' <param name="quality" value="high" />'
-		+' <param name="bgcolor" value="#ffffff" />'
-		+' <param name="autoplay" value="true"/>'
-		+' </object>';
-		var contentIE = '<object width="640" height="400" id="dphpsh_ie" align="center"  classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" >'
-		+' <param name="allowScriptAccess" value="sameDomain" />'
-		+' <param name="movie" value="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" />'
-		+' <param name="quality" value="high" />'
-		+' <param name="bgcolor" value="#ffffff" />'
-		+' <param name="autoplay" value="true"/>'
-		+' </object>';
+			var contentFirefox = '<object width="640" height="400" id="dphpsh_ff" align="center"  data="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" >'
+			+' <param name="allowScriptAccess" value="sameDomain" />'
+			+' <param name="movie" value="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" />'
+			+' <param name="quality" value="high" />'
+			+' <param name="bgcolor" value="#ffffff" />'
+			+' <param name="autoplay" value="true"/>'
+			+' </object>';
+			
+			var contentIE = '<video id=example-video width=640 height=400 class="video-js vjs-default-skin" controls>'
+			+'<source src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" type="video/mp4"></video>';
+
 			var contentOthers = '<embed width="640" height="400" src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" type="video/mp4" />';
  
 			var browser=navigator.userAgent;
@@ -117,6 +119,8 @@ cursor:pointer;
 				area: ['640px', '442px'],
 			 	content: contentIE
 				});
+				var player = videojs('example-video');
+				player.play();
 			}else{
 				layer.open({
 				type: 1,
