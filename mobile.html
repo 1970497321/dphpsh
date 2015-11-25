@@ -116,7 +116,7 @@ cursor:pointer;
 		})
 		
 		layer.ready(function(){
-			 layer.open({
+			/* layer.open({
 				type: 1,
 				skin: 'layui-layer-lan',
 				title: '热烈庆祝10月份再创辉煌，中标率60%+',
@@ -126,7 +126,7 @@ cursor:pointer;
 				area: ['640px', '442px'],
 			 	content: '<embed src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" width="640px" height="400px" type="video/mp4" >'
 			});
-			/*
+			
 			var contentIE = '<video id=example-video width=640 height=400 class="video-js vjs-default-skin" controls>'
 			+'<source src="http://www.maserati.com.cn//mediaObject/CHINA/video/For-MR_90s_comeback_MAND_SUB_HD_1920x1080_1126/original/For+MR_90s_comeback_MAND_SUB_HD_1920x1080_1126.mp4" type="video/mp4"></video>';
 
@@ -197,18 +197,28 @@ cursor:pointer;
 				</div>
 			</div>
 		</div>
-<div class="container_12">
+
+		<div class="container_12">
 	<section class="grid" id="grid">
-		<a href="#guess" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
+	<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
+			<figure>
+				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
+				<figcaption>
+					<div class="title">12月</div>
+				</figcaption>
+			</figure>
+			<span>你猜</span>
+		</a>
+		<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
 			<figure>
 				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
 				<figcaption>
 					<div class="title">11月</div>
 				</figcaption>
 			</figure>
-			<span>你猜</span>
+			<span>30%</span>
 		</a>
-		<a href="#10" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
+		<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
 			<figure>
 				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
 				<figcaption>
@@ -217,7 +227,7 @@ cursor:pointer;
 			</figure>
 			<span>60%</span>
 		</a>
-		<a href="#9" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
+		<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
 			<figure>
 				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
 				<figcaption>
@@ -226,29 +236,23 @@ cursor:pointer;
 			</figure>
 			<span>70%</span>
 		</a>
-		<a href="#8" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
-			<figure>
-				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
-				<figcaption>
-					<div class="title">8月</div>
-				</figcaption>
-			</figure>
-			<span>65%</span>
-		</a>
+		
 	</section>
 </div>
 
-<div id="photosDemoShow"  class="container_12 photos-demo">
+<div    class="container_12 photos-demo">
         <!-- layer-src表示大图  layer-pid表示图片id  src表示缩略图-->
-        <img layer-src="bids/10/2015-10-24 190553(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" target="_blank" alt="10月中标精选">
-        <img layer-src="bids/10/2015-10-24 190557(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" target="_blank" alt="10月中标精选">
-        <img layer-src="bids/9/2015-10-26 152858.jpg" layer-pid="" src="bids/9/2015-10-26 152858.jpg"   target="_blank" alt="9月中标精选">
-        <img layer-src="bids/9/2015-10-26 152902.jpg" layer-pid="" src="bids/9/2015-10-26 152902.jpg"  target="_blank" alt="9月中标精选">
-        <img layer-src="bids/10/2015-10-24 190612(1).jpg" layer-pid="" src="bids/10/2015-10-24 190612(1).jpg" target="_blank"  alt="10月中标精选">
-		<img layer-src="bids/10/2015-10-24 190619(1).jpg" layer-pid="" src="bids/10/2015-10-24 190619(1).jpg" target="_blank"   alt="10月中标精选">
-        <img layer-src="bids/10/2015-10-24 190622(1).jpg" layer-pid="" src="bids/10/2015-10-24 190622(1).jpg" target="_blank"  alt="10月中标精选">
-		<img layer-src="bids/10/2015-10-24 190608(1).jpg" layer-pid="" src="bids/10/2015-10-24 190608(1).jpg" target="_blank"  alt="10月中标精选">
+        <img layer-src="bids/11/2015-11-25 160115.jpg" layer-pid="" src="bids/11/2015-11-25 160115.jpg" alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
+        <img layer-src="bids/11/2015-11-25 160110.jpg" layer-pid="" src="bids/11/2015-11-25 160110.jpg" alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
+        <img layer-src="bids/11/2015-11-25 160106.jpg" layer-pid="" src="bids/11/2015-11-25 160106.jpg" alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
+
+        <img layer-src="bids/10/2015-10-24 190553(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
+        <img layer-src="bids/10/2015-10-24 190557(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
+        <img layer-src="bids/10/2015-10-24 190612(1).jpg" layer-pid="" src="bids/10/2015-10-24 190612(1).jpg" alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
+		<img layer-src="bids/10/2015-10-24 190619(1).jpg" layer-pid="" src="bids/10/2015-10-24 190619(1).jpg"  alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
+        <img layer-src="bids/10/2015-10-24 190622(1).jpg" layer-pid="" src="bids/10/2015-10-24 190622(1).jpg" alt="更多图片请点我" onclick="javascript:document.location.href='photos.html'">
 </div>
+		
 <footer>
 	<div class="container_12">
 		<div class="grid_12">
