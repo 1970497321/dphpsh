@@ -34,6 +34,19 @@
 		<script src="http://videojs.github.io/videojs-contrib-hls/node_modules/videojs-contrib-media-sources/src/videojs-media-sources.js"></script>
 		<script src="https://github.com/videojs/videojs-contrib-hls/releases/download/v0.17.1/videojs.hls.min.js"></script>
 		<link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">-->
+		<link rel="stylesheet" href="css/PhotoSwipe/photoswipe.css"> 
+
+<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+<link rel="stylesheet" href="css/PhotoSwipe/default-skin/default-skin.css"> 
+<!-- Core JS file -->
+<script src="js/PhotoSwipe/photoswipe.js"></script> 
+
+<!-- UI JS file -->
+<script src="js/PhotoSwipe/photoswipe-ui-default.js"></script> 
+
 <style>
 .photos-demo img{
 cursor:pointer;
@@ -197,67 +210,134 @@ cursor:pointer;
 			</div>
 		</div>
 	 
-  <div class="container photos-demo" id="photosDemoShow" >
-      <div class="item">
+	 
+	 
+  <div class="container photos-demo"  >
+      <div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 122938.jpg" layer-pid="" src="bids/1601/2016-01-16 122938.jpg" alt="1601月中标精选"  />
     </div>
-	 <div class="item">
+	 <div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 122944.jpg" layer-pid="" src="bids/1601/2016-01-16 122944.jpg" alt="1601月中标精选"  />
     </div>
-	<div class="item">
+	<div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 214234.jpg" layer-pid="" src="bids/1601/2016-01-16 214234.jpg" alt="1601月中标精选"  />
     </div>
-	<div class="item">
+	<div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 214238.jpg" layer-pid="" src="bids/1601/2016-01-16 214238.jpg" alt="1601月中标精选"  />
     </div>
-	<div class="item">
+	<div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 214242.jpg" layer-pid="" src="bids/1601/2016-01-16 214242.jpg" alt="1601月中标精选"  />
     </div>
-	<div class="item">
+	<div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 214244.jpg" layer-pid="" src="bids/1601/2016-01-16 214244.jpg" alt="1601月中标精选"  />
     </div>
-	<div class="item">
+	<div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 214247.jpg" layer-pid="" src="bids/1601/2016-01-16 214247.jpg" alt="1601月中标精选"  />
     </div>
-	<div class="item">
+	<div class="item" name="picsName">
       <img layer-src="bids/1601/2016-01-16 214402.jpg" layer-pid="" src="bids/1601/2016-01-16 214402.jpg" alt="1601月中标精选"  />
     </div>	
   
-      <div class="item">
+      <div class="item" name="picsName">
       <img layer-src="bids/11/2015-11-25 160115.jpg" layer-pid="" src="bids/11/2015-11-25 160115.jpg" alt="11月中标精选"  />
     </div>
-	    <div class="item">
+	    <div class="item" name="picsName">
       <img layer-src="bids/11/2015-11-25 160110.jpg" layer-pid="" src="bids/11/2015-11-25 160110.jpg" alt="11月中标精选"  />
     </div>
-	    <div class="item">
+	    <div class="item" name="picsName">
       <img layer-src="bids/11/2015-11-25 160106.jpg" layer-pid="" src="bids/11/2015-11-25 160106.jpg" alt="11月中标精选"  />
     </div>
 	
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/10/2015-10-24 190553(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选"  />
     </div>
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/10/2015-10-24 190557(1).jpg" layer-pid="" src="bids/10/2015-10-24 190553(1).jpg" alt="10月中标精选" />
     </div>
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/10/2015-10-24 190612(1).jpg" layer-pid="" src="bids/10/2015-10-24 190612(1).jpg" alt="10月中标精选" />
     </div>
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/10/2015-10-24 190619(1).jpg" layer-pid="" src="bids/10/2015-10-24 190619(1).jpg"  alt="10月中标精选" />
     </div>
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/10/2015-10-24 190622(1).jpg" layer-pid="" src="bids/10/2015-10-24 190622(1).jpg" alt="10月中标精选" />
     </div>
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/10/2015-10-24 190608(1).jpg" layer-pid="" src="bids/10/2015-10-24 190608(1).jpg" alt="10月中标精选" />
     </div>
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/9/2015-10-26 152858.jpg" layer-pid="" src="bids/9/2015-10-26 152858.jpg"  alt="9月中标精选" />
     </div>
-    <div class="item">
+    <div class="item" name="picsName">
       <img layer-src="bids/9/2015-10-26 152902.jpg" layer-pid="" src="bids/9/2015-10-26 152902.jpg" alt="9月中标精选" />
     </div>
 </div>
+ 
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
 <footer>
 	<div class="container_12">
 		<div class="grid_12">
@@ -314,6 +394,90 @@ cursor:pointer;
 			init();
 			})();
 		</script>
+ <script>
  
+ function initItems(el)
+{
+ 
+        var itemElements = el.getElementsByClassName('item'),
+            numNodes = itemElements.length,
+            items = [],
+            figureEl,
+            imgEl,
+            imgUrl,
+            item;
+
+        for(var i = 0; i < numNodes; i++) {
+
+            itemlEl = itemElements[i]; // <figure> element
+
+            // include only element nodes 
+            if(itemlEl.nodeType !== 1) {
+                continue;
+            }
+ 
+            imgEl = itemlEl.children[0]; // <img> element
+//alert(imgEl.innerHTML);
+            imgUrl = imgEl.getAttribute('src');
+            // create slide object
+            item = {
+                src: imgUrl,
+               // w: parseInt(size[0], 10),
+			    w:964,
+               // h: parseInt(size[1], 10)
+			    h:1024
+            };
+		/*	alert(item);
+			alert(item.src);
+			alert(item.w);
+			alert(item.h);*/
+            items.push(item);
+        }
+		//alert(items);
+        return items;
+ 
+}
+ 
+ var openPhotoSwipe = function() {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    // build items array
+   // var items = function(el) {
+	
+   // };
+   var items = initItems(document);	
+	//alert(items);
+	/* items = [
+        {
+            src: 'http://www.dphpsh.com/bids/1601/2016-01-16%20122938.jpg',
+			w: 964,
+            h: 1024
+        },
+		{
+            src: 'http://www.dphpsh.com/bids/1601/2016-01-16%20122938.jpg',
+			w: 964,
+            h: 1024
+        }
+    ];
+    alert(items);*/
+    // define options (if needed)
+    var options = {
+			 // history & focus options are disabled on CodePen        
+      	history: false,
+      	focus: false,
+
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+        
+    };
+    
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+};
+
+var picsName = document.getElementsByName('picsName');
+for(i=0;i<picsName.length;i++)
+picsName[i].onclick = openPhotoSwipe;
+
+ </script>
 </body>
 </html>
