@@ -44,6 +44,10 @@ margin: 7px 10px;
 position: relative;
 cursor:pointer;
 }
+.ratePic{
+ width: 1000px;
+ height: 400px;
+}
 </style>
 		<script>
 	    //加载扩展模块
@@ -186,47 +190,8 @@ cursor:pointer;
 				</div>
 			</div>
 		</div>
-<div class="container_12">
-	<section class="grid" id="grid">
-	<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
-			<figure>
-				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
-				<figcaption>
-					<div class="title">2016.01</div>
-				</figcaption>
-			</figure>
-			<span>你猜</span>
-		</a>
-		<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
-			<figure>
-				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
-				<figcaption>
-					<div class="title">2015.12</div>
-				</figcaption>
-			</figure>
-			<span>45%</span>
-		</a>
-		<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
-			<figure>
-				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
-				<figcaption>
-					<div class="title">2015.11</div>
-				</figcaption>
-			</figure>
-			<span>30%</span>
-		</a>
-		<a href="photos.html" data-path-hover="m 180,70.57627 -180,0 L 0,0 180,0 z">
-			<figure>
-				<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,262 0,0 180,0 z"/></svg>
-				<figcaption>
-					<div class="title">2015.10</div>
-				</figcaption>
-			</figure>
-			<span>60%</span>
-		</a>
-		
-	</section>
-</div>
+
+<div id="ratePic" class="container_12 ratePic" ></div>
 
 <div    class="container_12 photos-demo">
         <!-- layer-src表示大图  layer-pid表示图片id  src表示缩略图-->
@@ -296,6 +261,68 @@ cursor:pointer;
 			init();
 			})();
 		</script>
- 
+ <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.0.0.js"></script>
+<script type="text/javascript">
+var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var app = {};option = null;option = {
+    title : {
+        text: '价格及中标率',
+        subtext: '每月更新'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+
+    toolbox: {
+         show : true,
+         feature : {
+             saveAsImage: {}
+         }
+    },
+    xAxis : [
+        {
+            name:'月份',
+            type : 'category',
+            boundaryGap : false,
+            data : ['201506','201507','201508','201509','201510','201511','201512','201601','201602','201603','201604']
+        }
+    ],
+    yAxis : [
+        {
+            name:'价格',
+            type : 'value',
+            min:75000,
+            max:90000,
+            interval:5000
+        }
+    ],
+    series : [
+       
+        {
+            name:'成交价',
+            type:'line',
+            data:[80000, 83100, 82600, 82100, 85300, 84600, 84500,82200,'?','?','?'],
+            markPoint : {
+                symbol :'pin',
+                symbolSize : 65,
+                data : [
+                    {name : '中标率', value : 40, xAxis: 1, yAxis: 83100},
+                    {name : '中标率', value : 35, xAxis: 2, yAxis: 82600},
+                    {name : '中标率', value : 65, xAxis: 3, yAxis: 82100},
+                    {name : '中标率', value : 70, xAxis: 4, yAxis: 85300},
+                    {name : '中标率', value : 30, xAxis: 5, yAxis: 84600},
+                    {name : '中标率', value : 45, xAxis: 6, yAxis: 84500},
+					{name : '中标率', value : 50, xAxis: 7, yAxis: 82200}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '均价'}
+                ]
+            }
+        }
+    ]
+};
+;if (option && typeof option === "object") {var startTime = +new Date();myChart.setOption(option, true);var endTime = +new Date();var updateTime = endTime - startTime;console.log("Time used:", updateTime);}
+</script>
 </body>
 </html>
