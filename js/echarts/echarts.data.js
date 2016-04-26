@@ -1,7 +1,7 @@
 var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var app = {};option = null;option = {
     title : {
-        text: '¼Û¸ñ¼°ÖĞ±êÂÊ',
-        subtext: 'Ã¿ÔÂ¸üĞÂ'
+        text: 'ä»·æ ¼åŠä¸­æ ‡ç‡',
+        subtext: 'æ¯æœˆæ›´æ–°'
     },
     tooltip : {
         trigger: 'axis'
@@ -15,7 +15,7 @@ var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var
     },
     xAxis : [
         {
-            name:'ÔÂ·İ',
+            name:'æœˆä»½',
             type : 'category',
             boundaryGap : false,
             data : ['201506','201507','201508','201509','201510','201511','201512','201601','201602','201603','201604']
@@ -23,7 +23,7 @@ var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var
     ],
     yAxis : [
         {
-            name:'¼Û¸ñ',
+            name:'ä»·æ ¼',
             type : 'value',
             min:75000,
             max:90000,
@@ -33,28 +33,28 @@ var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var
      series : [
        
         {
-            name:'³É½»¼Û',
+            name:'æˆäº¤ä»·',
             type:'line',
             data:[80000, 83100, 82600, 82100, 85300, 84600, 84500,82200,83200,83100,85100],
             markPoint : {
                 symbol :'pin',
                 symbolSize : 65,
                 data : [
-                    {name : 'ÖĞ±êÂÊ%', value : 40, xAxis: 1, yAxis: 83100},
-                    {name : 'ÖĞ±êÂÊ%', value : 35, xAxis: 2, yAxis: 82600},
-                    {name : 'ÖĞ±êÂÊ%', value : 65, xAxis: 3, yAxis: 82100},
-                    {name : 'ÖĞ±êÂÊ%', value : 70, xAxis: 4, yAxis: 85300},
-                    {name : 'ÖĞ±êÂÊ%', value : 30, xAxis: 5, yAxis: 84600},
-                    {name : 'ÖĞ±êÂÊ%', value : 45, xAxis: 6, yAxis: 84500},
-					{name : 'ÖĞ±êÂÊ%', value : 50, xAxis: 7, yAxis: 82200},
-					{name : 'ÖĞ±êÂÊ%', value : 50, xAxis: 8, yAxis: 83200},
-					{name : 'ÖĞ±êÂÊ%', value : 40, xAxis: 9, yAxis: 83100},
-					{name : 'ÖĞ±êÂÊ%', value : 30, xAxis: 10, yAxis: 85100}
+                    {name : 'ä¸­æ ‡ç‡%', value : 40, xAxis: 1, yAxis: 83100},
+                    {name : 'ä¸­æ ‡ç‡%', value : 35, xAxis: 2, yAxis: 82600},
+                    {name : 'ä¸­æ ‡ç‡%', value : 65, xAxis: 3, yAxis: 82100},
+                    {name : 'ä¸­æ ‡ç‡%', value : 70, xAxis: 4, yAxis: 85300},
+                    {name : 'ä¸­æ ‡ç‡%', value : 30, xAxis: 5, yAxis: 84600},
+                    {name : 'ä¸­æ ‡ç‡%', value : 45, xAxis: 6, yAxis: 84500},
+					{name : 'ä¸­æ ‡ç‡%', value : 50, xAxis: 7, yAxis: 82200},
+					{name : 'ä¸­æ ‡ç‡%', value : 50, xAxis: 8, yAxis: 83200},
+					{name : 'ä¸­æ ‡ç‡%', value : 40, xAxis: 9, yAxis: 83100},
+					{name : 'ä¸­æ ‡ç‡%', value : 30, xAxis: 10, yAxis: 85100}
                 ]
             },
             markLine : {
                 data : [
-                    {type : 'average', name : '¾ù¼Û'}
+                    {type : 'average', name : 'å‡ä»·'}
                 ]
             }
         }
