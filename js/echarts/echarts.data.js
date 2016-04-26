@@ -18,7 +18,7 @@ var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var
             name:'月份',
             type : 'category',
             boundaryGap : false,
-            data : ['201506','201507','201508','201509','201510','201511','201512','201601','201602','201603','201604']
+            data : ['201506','201507','201508','201509','201510','201511','201512','201601','201602','201603','201604','201605']
         }
     ],
     yAxis : [
@@ -35,7 +35,7 @@ var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var
         {
             name:'成交价',
             type:'line',
-            data:[80000, 83100, 82600, 82100, 85300, 84600, 84500,82200,83200,83100,85100],
+            data:[80000, 83100, 82600, 82100, 85300, 84600, 84500,82200,83200,83100,85100,'??'],
             markPoint : {
                 symbol :'pin',
                 symbolSize : 65,
