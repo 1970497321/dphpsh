@@ -49,7 +49,7 @@ var dom = document.getElementById("ratePic");var myChart = echarts.init(dom);var
 					{name : '中标率%', value : 30, xAxis: 7, yAxis: 85100}
 					{name : '中标率%', value : 40, xAxis: 8, yAxis: 85000},
                     {name : '中标率%', value : 35, xAxis: 9, yAxis: 84400},
-                    {name : '中标率%', value : 65, xAxis: 10, yAxis: 87200},
+                    {name : '中标率%', value : 65, xAxis: 10, yAxis: 87200}
                 ]
             },
             markLine : {
